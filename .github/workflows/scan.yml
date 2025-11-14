@@ -1,4 +1,4 @@
-name: Endor Labs PR Check for Vulns and Secrets
+name: Endor Labs Scan
 on:
   pull_request:
     branches: [ main]
@@ -21,11 +21,11 @@ jobs:
       with:
           python-version: '3.11'
           cache: 'pip'
-    - name: Install dependencies
-      run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-    - name: Endor Labs Scan Pull Request
+    # - name: Install dependencies
+    #   run: |
+    #       python -m pip install --upgrade pip
+    #       pip install -r requirements.txt
+    - name: Endor Labs Scan
       uses: endorlabs/github-action@v1.1.7
       with:
         namespace: 'nate-learn'
