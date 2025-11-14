@@ -31,4 +31,5 @@ jobs:
         namespace: 'nate-learn'
         scan_dependencies: true
         pr: false
+        scan_summary_output_type: "table"
         additional_args: "--ai-models"
